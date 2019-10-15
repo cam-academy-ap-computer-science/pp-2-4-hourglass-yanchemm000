@@ -35,14 +35,16 @@ public class Hourglass {
 	public static void middle () {
 		System.out.println("     ||");
 	}
+	
+	
 	public static void bottomLayers() {
 		for (int line = 1; line <= 4; line++) {
-			for (int i = 1; i<= 4; i++) {
+			for (int i = 1; i<= 4 - line; i++) {
 				System.out.print(" ");
 			}
 			System.out.print("/");
 			for (int j = 1; j<= 4; j ++) {
-				for(int i=1; i<=4; i++) {
+				for(int i=1; i<= j * 2; i++) {
 				System.out.print(":");
 			}
 			System.out.println("\\");
