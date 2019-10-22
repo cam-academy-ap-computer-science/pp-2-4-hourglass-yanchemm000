@@ -1,5 +1,7 @@
-/*This is my commit block where I am supposed to tell you how I plan to do this.
-Problem is, I don't know what I'm going to do yet. RETYPE LATER
+/*This is my commit block. I'm going to break this up into the top and bottom 
+ * line into one method, the triangle for the top, the triangle for the bottom
+ * and the middle. The triangle needs to have spacing that changes per line 
+ * and colons that changes per line.
 */
 
 public class Hourglass {
@@ -8,6 +10,7 @@ public class Hourglass {
 		topLayers();
 		middle();
 		bottomLayers();
+		topBottom();
 	}
 	public static void topBottom () {
 		System.out.println("|\"\"\"\"\"\"\"\"\"\"|");
@@ -28,32 +31,27 @@ public class Hourglass {
 			}
 			System.out.println("/");
 		}
-		
-		
-		
 	}
 	public static void middle () {
 		System.out.println("     ||");
 	}
-	
-	
 	public static void bottomLayers() {
 		for (int line = 1; line <= 4; line++) {
-			for (int i = 1; i<= 4 - line; i++) {
+			for (int i = 1; i<= 5 - line ; i++) {
 				System.out.print(" ");
 			}
 			System.out.print("/");
-			for (int j = 1; j<= 4; j ++) {
-				for(int i=1; i<= j * 2; i++) {
+			for (int j = 1; j<= line * 2; j ++) {
 				System.out.print(":");
+				}
+				System.out.print("\\");
+				System.out.println("");
 			}
-			System.out.println("\\");
-			
+			}
 		}
-	}
 	
-}
-}
+
+
 
 
 
